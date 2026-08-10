@@ -74,26 +74,6 @@ AI-Backend-Roadmap-2026/
 
 ## 📌 وضعیت فعلی / Current Status
 
-**فارسی**  
-در حال حاضر، من در حال تکمیل پیش‌نیازهای اولیه شامل مفاهیم پیشرفته پایتون، Git، SQL و REST API هستم. به‌زودی اولین پروژه آغاز خواهد شد.
+ به‌زودی اولین پروژه آغاز خواهد شد.
 
-**English**  
-I am currently completing the initial prerequisites, including advanced Python concepts, Git, SQL, and REST APIs. The first project will begin soon.
-
----
-
-## 🤝 ارتباط / Connect
-
-**فارسی**  
-شما می‌توانید پیشرفت من را در این مخزن دنبال کنید. اگر در این مسیر هستید یا پیشنهادی دارید، خوشحال می‌شوم با شما ارتباط برقرار کنم.
-
-**English**  
-You can follow my progress in this repository. If you are on a similar path or have any suggestions, I'd be happy to connect.
-
----
-
-### ⭐ حمایت / Support
-
-اگر این مسیر برای شما جالب است، با ستاره دادن (⭐) به این مخزن، به من انگیزه‌ی بیشتری برای ادامه و به‌اشتراک‌گذاری دقیق‌تر تجربیاتم بدهید.  
-If you find this journey interesting, please give this repository a star (⭐) to motivate me to continue and share my experiences in more detail.
-```
+The first project will begin soon.
