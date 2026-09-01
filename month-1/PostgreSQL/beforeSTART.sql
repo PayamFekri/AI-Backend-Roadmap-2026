@@ -18,6 +18,11 @@ psql -U postgres -d your_database_name
 \q : quit psql
 
 
+null : unknown or missing value, it is a special marker used in SQL to indicate that a data value does not exist in the database. It is different from an empty string or a zero value, as those are considered valid values. Null can be used in any data type and can be assigned to any column in a table, unless the column is defined as NOT NULL.
+"" or '' : empty string, it is a string with zero length, it is a valid value for a string data type and can be assigned to any column in a table that allows null values. An empty string is different from null, as it represents a known value (an empty string) rather than an unknown or missing value (null).
+0 : zero value, it is a numeric value that represents the absence of any quantity or magnitude. It is a valid value for numeric data types and can be assigned to any column in a table that allows null values. Zero is different from null, as it represents a known value (zero) rather than an unknown or missing value (null).
+
+
 
 */
 
