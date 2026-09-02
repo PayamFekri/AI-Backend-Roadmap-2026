@@ -54,6 +54,21 @@ INSERT INTO shop.users_v2(username, email) VALUES
 ('user4', 'user4@example.com'),
 ('user5', 'user5@example.com');
 
+
+CREATE INDEX idx_post_tags__post_id
+ON shop.post_tags(post_id);
+
+EXPLAIN
+SELECT *
+FROM shop.post_tags
+WHERE post_id = 1;
+
+EXPLAIN ANALYZE
+SELECT *
+FROM shop.post_tags
+WHERE post_id = 1;
+
+/*
 SELECT pt.post_id, COUNT(*) AS tag_count
 FROM shop.post_tags AS pt
 GROUP BY pt.post_id
@@ -65,12 +80,13 @@ GROUP BY pt.post_id
 HAVING COUNT(*) > 2
 ORDER BY pt.post_id;
 
-/*
+
 products_v2(id ,name, sku,
  price, stock, discount,
  is_active, description,
  created_at)
-*/
+
+
 SELECT name , price from shop.products_v2
 WHERE price > (SELECT avg(price) from shop.products_v2);
 
@@ -98,3 +114,6 @@ on p.id = pt.post_id
 inner join shop.tags as t
 on pt.tag_id = t.id
 order by p.id ASC;
+
+
+*/
