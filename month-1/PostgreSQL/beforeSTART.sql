@@ -37,3 +37,22 @@ null : unknown or missing value, it is a special marker used in SQL to indicate 
     This schema will be used to organize the tables related to the shop.
 */
 --CREATE SCHEMA IF NOT EXISTS shop;
+
+/*
+foreign key : is a field (or collection of fields) in one table that refers to the primary key in another table. 
+The foreign key establishes a relationship between the two tables,
+allowing you to enforce referential integrity and maintain consistency in your data.
+In PostgreSQL, you can define a foreign key constraint when creating or altering a table, specifying the referenced table and column(s).
+When a foreign key constraint is in place, the database will prevent actions that would violate the relationship, such as inserting a value in the foreign key column that does not exist in the referenced primary key column.
+
+primary key : is a field (or collection of fields) in a table that uniquely identifies each row in that table.
+A primary key constraint ensures that the values in the primary key column(s) are unique and not null,
+providing a way to enforce entity integrity in the database.
+
+Composite Primary Key: is a primary key that consists of two or more columns in a table.
+A composite primary key is used when a single column is not sufficient to uniquely identify each row in the table. Instead, the combination of values in the specified columns must be unique for each row.
+When defining a composite primary key, you can use the PRIMARY KEY constraint followed by a list of the columns that make up the key, enclosed in parentheses.
+
+
+
+*/
