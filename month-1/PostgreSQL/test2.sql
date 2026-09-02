@@ -19,6 +19,18 @@ INSERT INTO shop.products_v2(id ,name, sku, price, stock, discount, is_active, d
 (3334, 'pip Product D', 'SKU00445', 49.99, 30, 15, true, 'Description for Product D', DEFAULT),
 (5, 'product E', 'SKU005', 14.99, 150, 0, false, 'Description for Product E', '2020-05-12 10:21:34.017051');
 
+--products_v2(id ,
+-- name, sku, price,
+-- stock, discount, is_active,
+-- description, created_at)
+select 
+count(p.id) as total_products,
+avg (p.price) as average_price,
+min(p.price) as minimum_price,
+max(p.price) as maximum_price,
+sum(p.stock) as total_stock
+from shop.products_v2 as p;
+
 delete from shop.products_v2 
 where id = 5
 RETURNING id,name,sku,price;
