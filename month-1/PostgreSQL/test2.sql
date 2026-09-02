@@ -19,6 +19,22 @@ INSERT INTO shop.products_v2(id ,name, sku, price, stock, discount, is_active, d
 (3334, 'pip Product D', 'SKU00445', 49.99, 30, 15, true, 'Description for Product D', DEFAULT),
 (5, 'product E', 'SKU005', 14.99, 150, 0, false, 'Description for Product E', '2020-05-12 10:21:34.017051');
 
+CREATE INDEX idx_products_active_price
+ON shop.products_v2(is_active, price);
+
+EXPLAIN ANALYZE
+SELECT name, price
+FROM shop.products_v2
+WHERE is_active = true
+ORDER BY price;
+
+EXPLAIN ANALYZE
+SELECT *
+FROM shop.products_v2
+WHERE is_active = true
+AND price > 20
+ORDER BY price;
+
 --products_v2(id ,
 -- name, sku, price,
 -- stock, discount, is_active,
