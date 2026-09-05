@@ -4,7 +4,7 @@ CREATE TABLE shop.users(
     id_secret uuid default gen_random_uuid() UNIQUE,
     username TEXT not null,
     email TEXT unique ,
-    age INTEGER
+    age INTEGER check (age >= 18)
 );
 
 drop table if exists shop.products;
