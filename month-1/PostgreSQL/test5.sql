@@ -51,3 +51,11 @@ WHERE id = 6572;
 ROLLBACK TO SAVEPOINT before_second_update;
 
 COMMIT;
+
+
+BEGIN;
+update shop.products_v2
+SET stock = stock - 3
+WHERE id = 7561
+and stock >= 2;
+commit;
