@@ -11,13 +11,21 @@ create table shop.products_v2(
     created_at TIMESTAMP DEFAULT now()
 );
 
-
-INSERT INTO shop.products_v2(id ,name, sku, price, stock, discount, is_active, description, created_at) values
-(7561, '12Product A', 'SKU001', 19.99, 100, 10, true, 'Description for Product A', DEFAULT),
-(6572, 'Product B', 'ghSKU002', 29.99, 50, 0, true, 'Description for Product B', DEFAULT),
-(3333, 'Product C', 'SKU003', 9.99, 200, 5, false, 'Description for Product C', '2020-08-31 10:21:34.017051'),
-(3334, 'pip Product D', 'SKU00445', 49.99, 30, 15, true, 'Description for Product D', DEFAULT),
-(5, 'product E', 'SKU005', 14.99, 150, 0, false, 'Description for Product E', '2020-05-12 10:21:34.017051');
+TRUNCATE shop.products_v2 RESTART IDENTITY CASCADE;
+INSERT INTO shop.products_v2
+(name, sku, price, stock, discount, is_active, description, created_at) VALUES
+('12Product A', 'SKU001',  19.99, 100, 10, true,  'Description for Product A', DEFAULT),
+('Product B',   'ghSKU002', 29.99,  50,  0, true,  'Description for Product B', DEFAULT),
+('Product C',   'SKU003',    9.99, 200,  5, false, 'Description for Product C', '2020-08-31 10:21:34.017051'),
+('Product D',   'SKU00445', 49.99,  30, 15, true,  'Description for Product D', DEFAULT),
+('product E',   'SKU005',   14.99, 150,  0, false, 'Description for Product E', '2020-05-12 10:21:34.017051'),
+('product F',   'SKU006',   24.99, 150,  0, true,  'Description for Product F', DEFAULT),
+('product G',   'SKU007',   12.99, 150,  0, false, 'Description for Product G', '2020-05-12 10:21:34.017051'),
+('product H',   'SKU008',   77.99, 150,  0, true,  'Description for Product H', DEFAULT),
+('product I',   'SKU009',   43.99,  34, 30, true,  'Description for Product I', DEFAULT),
+('product J',   'SKU0010',  19.99, 150,  0, true,  'Description for Product J', '2020-05-12 10:21:34.017051'),
+('product K',   'SKU0011',   8.99, 150,  0, false, 'Description for Product K', DEFAULT),
+('product L',   'SKU0012',  39.99, 150,  2, true,  'Description for Product L', '2020-05-12 10:21:34.017051');
 
 CREATE INDEX idx_products_active_price
 ON shop.products_v2(is_active, price);
